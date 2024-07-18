@@ -112,10 +112,7 @@ Open a terminal and run:
 
 ```bash
 $ pip install streamlit
-$ streamlit hello
 ```
-
-If this opens our sweet _Streamlit Hello_ app in your browser, you're all set! If not, head over to [our docs](https://docs.streamlit.io/get-started) for specific installs.
 
 
 ### A little example
@@ -127,10 +124,12 @@ x = st.slider("Select a value")
 st.write(x, "squared is", x * x)
 ```
 
-Now run it to open the app!
+Now run this to open the app!
 ```
 $ streamlit run streamlit_app.py
 ```
+This opens our app in your browser, you're all set! If not, head over to [our docs](https://docs.streamlit.io/get-started) for specific installs.
+
 ## Result
 
 ### You should aim to:
