@@ -37,8 +37,7 @@ Before you begin, ensure you have the following installed:
 - **Python 3.x**: A versatile programming language that is widely used for web scraping, data analysis, and developing web applications.
 - **ChromeDriver**: A separate executable that Selenium WebDriver uses to control Chrome. It is necessary for running automated tests on the Chrome browser.
 - **Selenium**: A powerful tool for web automation that allows you to programmatically control a web browser. It's essential for automating web scraping tasks.
-- **SQL**: SQL (Structured Query Language) is the essential tool for managing and querying data in relational databases.
-- **Openpyxl**: A Python library to read/write Excel files, used for saving the scraped data into an Excel spreadsheet.
+- **SQLite3**: SQLite3 is a lightweight, self-contained SQL database engine known for its simplicity and portability.
 - **Streamlit**: A tool to display and filter the scrapped data.
 ## Installation:
 
@@ -60,39 +59,40 @@ Depending on your Operating System and browser of choice, the source of download
 
 ## II. SQL
 
-SQL (Structured Query Language) is used to communicate with a database. It is the standard language for relational database management systems.
+SQLite3 is a lightweight, self-contained SQL database engine known for its simplicity and portability.We are using DB Browser for SQLite,a user-friendly, open-source tool for creating, designing, and managing SQLite databases with a graphical interface."
 
 ### Setting up SQL
 
 **1. Install a SQL Database**:
-    
-For local development, you can use SQLite, MySQL, or PostgreSQL.
+   
+For local development, you can use SQLite.
 
 **2. Connect to the Database**:
 
-Use Python libraries like `mysql-connector-python` for MySQL or `psycopg2` for PostgreSQL.
+      conn = sqlite3.connect('redbus.db')
+      c = conn.cursor()
 
-Example installation using pip:
-
-     pip install mysql-connector-python
-
-**3. Create Database and Tables**:
-   
-   Example SQL script to create tables:
-        
-        CREATE TABLE bus_routes (
-        id INT AUTO_INCREMENT PRIMARY KEY,
+    # Create table
+    c.execute('''
+    CREATE TABLE IF NOT EXISTS redbuscsv (
         route_name TEXT,
-        route_link TEXT,
-        busname TEXT,
-        bustype TEXT,
-        departing_time DATETIME,
+        route_url TEXT,
+        bus_name TEXT,
+        departure TEXT,
+        arrival TEXT,
+        depart_time TEXT,
+        arrival_time TEXT,
         duration TEXT,
-        reaching_time DATETIME,
-        star_rating FLOAT,
-        price DECIMAL,
-        seats_available INT
-        );
+        bus_type TEXT,
+        star_rating TEXT,
+        price TEXT,
+        seats_available TEXT
+    )
+    ''')
+
+    # Commit and close the connection
+    conn.commit()
+    conn.close()
         
 
 ## III. Streamlit
