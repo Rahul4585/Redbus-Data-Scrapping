@@ -129,7 +129,8 @@ st.write(x, "squared is", x * x)
 Now run it to open the app!
 ```
 $ streamlit run streamlit_app.py
-```## Result
+```
+## Result
 
 ### You should aim to:
 - Successfully scrape a minimum of 10 Government State Bus Transport data from Redbus website using Selenium. Also include the private bus information for the selected routes.
@@ -142,6 +143,7 @@ $ streamlit run streamlit_app.py
 - **Data Scraping Accuracy**: Completeness and correctness of the scraped data.
 - **Database Design**: Effective and efficient database schema.
 - **Application Usability**: User experience and ease of use of the Streamlit
+
 ## Reference
 
 - Selenium Documentation : 
