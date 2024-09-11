@@ -1,45 +1,89 @@
+<div align="center">
 
-# Redbus Data Scraping with Selenium & Dynamic Filtering using Streamlit
+# 🚍 Redbus Data Scraping with Selenium & Dynamic Filtering using Streamlit
 
-This project aims to revolutionize the transportation industry by providing a comprehensive solution for collecting, analyzing, and visualizing bus travel data. By utilizing Selenium for web scraping, this project automates the extraction of detailed information from Redbus, including bus routes, schedules, prices, and seat availability. By streamlining data collection and providing powerful tools for data-driven decision-making, this project can significantly improve operational efficiency and strategic planning in the transportation industry.
-## Table of content
+</div>
 
-- [Usage](#usage)
-- [Approach](#Approach)
-- [Technology Used](#TechnologyUsed)
-- [Installation](#Installation)
-- [Result](#Result)
-- [Reference](#Reference)
-## Usage:
+<div align="center">
+
+[![](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=darkgreen)](https://www.python.org)
+[![](https://img.shields.io/badge/scikit_learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/stable/)
+[![](https://img.shields.io/badge/Numpy-777BB4?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org)
+[![](https://img.shields.io/badge/Pandas-2C2D72?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org)
+[![](https://img.shields.io/badge/Plotly-239120?style=for-the-badge&logo=plotly&logoColor=white)](https://plotly.com)
+[![](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io)
+[![](https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white)](https://www.selenium.dev/documentation/webdriver/elements/locators/)
+[![](https://img.shields.io/badge/SQL-003B57?style=for-the-badge&logo=mysql&logoColor=white)](https://dev.mysql.com/doc/)
+
+</div>
+
+<div align="center">
+  <img width="865" alt="image" src="https://github.com/user-attachments/assets/668ccde0-1434-4fa8-9993-0cd02df1af9a">
+</div>
+
+# 📉 Project Overview
+
+Our project aims to revolutionize the transportation industry by providing a comprehensive solution for collecting, analyzing, and visualizing bus travel data. By utilizing Selenium for web scraping, this project automates the extraction of detailed information from Redbus, including bus routes, schedules, prices, and seat availability. By streamlining data collection and providing powerful tools for data-driven decision-making, this project can significantly improve operational efficiency and strategic planning in the transportation industry.
+
+## 📊Data Source:
+
+* Data will be scraped from the Redbus website.
+* The scraped data will be stored in a SQL database.
+ 
+- **Website**: [Redbus](https://www.redbus.in/)
+
+The scraped dataset will contain detailed information about bus services available on Redbus, covering various aspects critical to travelers and service providers. Here is a breakdown of the fields required:
+
+| Field Name          | Description                                                                                                                                                 |
+|---------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Bus Route Name**   | The start and end locations of each bus journey, providing crucial information about the routes serviced.                                            |
+| **Bus Route Link**   | Contains the link for all route details.                                                                                                                    |
+| **Bus Name**         | The name of the bus or the service provider, used to identify the specific operator.                                                                          |
+| **Bus Type**         | Specifies whether the bus is Sleeper/Seater/AC/Non-AC, indicating seating arrangements and comfort level offered.                                            |
+| **Departing Time**   | The scheduled departure time of the bus, essential for planning travel schedules.                                                                            |
+| **Duration**         | The total journey duration from the departure point to the destination, helping passengers estimate travel time.                                              |
+| **Reaching Time**    | The expected arrival time at the destination, allowing for better planning of onward travel or activities.                                                   |
+| **Star Rating**      | A rating provided by passengers, indicating the quality of service based on factors such as comfort, punctuality, and staff behavior.                        |
+| **Price**            | The ticket price for the journey, which can vary based on factors like bus type and demand.                                                                  |
+| **Seat Availability**| The number of seats available at the time of data scraping, giving real-time insight into the occupancy levels.                                               |
+
+
+
+## 🚀 Usage
 
 The solution can be applied to various business scenarios including:
 - **Travel Aggregators**: Providing real-time bus schedules and seat availability for customers.
 - **Market Analysis**: Analyzing travel patterns and preferences for market research.
 - **Customer Service**: Enhancing user experience by offering customized travel options based on data insights.
 - **Competitor Analysis**: Comparing pricing and service levels with competitors.
-## Approach
+
+
+## 🛠 Approach
 
 **1. Data Scraping**:
-Use Selenium to automate the extraction of Redbus data including routes, schedules, prices, and seat availability.
+We are using Selenium to automate the extraction of Redbus data including routes, schedules, prices, and seat availability.
 
 **2. Data Storage**:
-Store the scraped data in a SQL database.
+Stored the scraped data in a SQL database.
 
 **3. Streamlit Application**:
-   - Develop a Streamlit application to display and filter the scraped data.
-   - Implement various filters such as bus type, route, price range, star rating, and availability.
+   - Developed a Streamlit application to display and filter the scraped data.
+   - Implemented various filters such as bus type, route, price range, star rating, and availability.
+
 **4. Data Analysis/Filtering using Streamlit**:
-   - Use SQL queries to retrieve and filter data based on user inputs.
-   - Use Streamlit to allow users to interact with and filter the data through the application.
-## Technolgy used
+   - Used SQL queries to retrieve and filter data based on user inputs.
+   - Used Streamlit to allow users to interact with and filter the data through the application.
+     
+## 🧩 Technology Used
 Before you begin, ensure you have the following installed:
 
-- **Python 3.x**: A versatile programming language that is widely used for web scraping, data analysis, and developing web applications.
+- **Python**: A versatile programming language that is widely used for web scraping, data analysis, and developing web applications.
 - **ChromeDriver**: A separate executable that Selenium WebDriver uses to control Chrome. It is necessary for running automated tests on the Chrome browser.
 - **Selenium**: A powerful tool for web automation that allows you to programmatically control a web browser. It's essential for automating web scraping tasks.
-- **SQLite3**: SQLite3 is a lightweight, self-contained SQL database engine known for its simplicity and portability.
+- **SQL**: SQLite3 is a lightweight, self-contained SQL database engine known for its simplicity and portability
 - **Streamlit**: A tool to display and filter the scrapped data.
-## Installation:
+
+## 📥 Installation
 
 ## I. Selenium:
 Selenium is a library that enables automation of web browsers. It is primarily used for automating web applications for testing purposes but is also capable of being used for automating any web-based administration tasks.
@@ -93,7 +137,7 @@ For local development, you can use SQLite.
     # Commit and close the connection
     conn.commit()
     conn.close()
-        
+
 
 ## III. Streamlit
 
@@ -111,9 +155,9 @@ Streamlit lets you transform Python scripts into interactive web apps in minutes
 Open a terminal and run:
 
 ```bash
-$ pip install streamlit
-```
+ pip install streamlit
 
+```
 
 ### A little example
 
@@ -130,27 +174,15 @@ $ streamlit run streamlit_app.py
 ```
 This opens our app in your browser, you're all set! If not, head over to [our docs](https://docs.streamlit.io/get-started) for specific installs.
 
-## Result
+<img width="960" alt="streamlit 1" src="https://github.com/user-attachments/assets/822e803c-39bf-420c-9708-a9cc62c7979c">
 
-### You should aim to:
-- Successfully scrape a minimum of 10 Government State Bus Transport data from Redbus website using Selenium. Also include the private bus information for the selected routes.
-- Store the data in a structured SQL database.
-- Develop an interactive Streamlit application for data filtering.
-- Ensure the application is user-friendly and efficient.
+<img width="960" alt="streamlit 2" src="https://github.com/user-attachments/assets/7e37892c-4221-4adb-b085-0af6c4221c55">
 
-### Project Evaluation Metrics
+<img width="960" alt="streamlit 3" src="https://github.com/user-attachments/assets/7f8a71fc-31bd-411b-8d9a-4e6fd048903c">
 
-- **Data Scraping Accuracy**: Completeness and correctness of the scraped data.
-- **Database Design**: Effective and efficient database schema.
-- **Application Usability**: User experience and ease of use of the Streamlit
+## 🎯 Result
 
-## Reference
-
-- Selenium Documentation : 
-https://www.selenium.dev/documentation/webdriver/elements/locators/
-
-- SQL Documentation : 
-https://dev.mysql.com/doc/
-
-- Streamlit Documentation : 
-https://docs.streamlit.io/
+- Successfully scraped a minimum of 10 Government State Bus Transport data from Redbus website using Selenium. Also included the private bus information for the selected routes.
+- Stored the data in a structured SQL database.
+- Developd an interactive Streamlit application for data filtering.
+- Ensured the application is user-friendly and efficient.
